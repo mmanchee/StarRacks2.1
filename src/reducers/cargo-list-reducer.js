@@ -12,7 +12,9 @@ export default (state = {}, action) => {
       }
     });
   case 'DELETE_CARGO':
-    return state;
+    const newState = { ...state };
+    delete newState[id];
+    return newState;
   default:
     return state;
   }
