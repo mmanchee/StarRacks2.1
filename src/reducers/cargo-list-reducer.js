@@ -11,6 +11,8 @@ export default (state = {}, action) => {
         id: id
       }
     });
+  case 'DELETE_CARGO':
+    return state;
   default:
     return state;
   }

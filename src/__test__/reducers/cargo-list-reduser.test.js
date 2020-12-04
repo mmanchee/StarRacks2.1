@@ -2,6 +2,23 @@ import cargoListReducer from '../../reducers/cargo-list-reducer';
 
 describe('cargoListReducer', () => {
 
+  const currentState = {
+    1: {
+      Name: 'Monster Dog (aka Jadashha)',
+      Description: 'Jadashha from Q\'onoS',
+      Crates: 8,
+      EnergyCredits: 20,
+      id: 1
+    },
+    2: {
+      Name: 'Razorbacks',
+      Description: 'Brown RazorBack from El-Auria',
+      Crates: 10,
+      EnergyCredits: 34,
+      id: 2
+    }
+  }
+
   let action;
   const cargoData = {
     Name: 'Cats',
@@ -34,6 +51,22 @@ describe('cargoListReducer', () => {
         EnergyCredits: EnergyCredits,
         id: id
       }
-    })
-  })
+    });
+  });
+  test('Should accurately jettison cargo', () => {
+    action = {
+      type: 'DELETE_CARGO',
+      id: 1
+    };
+    expect(cargoListReducer(currentState, action)).toEqual({
+      2: {
+        Name: 'Razorbacks',
+        Description: 'Brown RazorBack from El-Auria',
+        Crates: 10,
+        EnergyCredits: 34,
+        id: 2
+      }
+    });
+  });
+  
 });
