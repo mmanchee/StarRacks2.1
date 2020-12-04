@@ -12,4 +12,19 @@ describe('cargo actions', () => {
       type: 'TOGGLE_FORM'
     });
   });
+  it('addCargo should create ADD_CARGO action', () => {
+    expect(actions.addCargo({ 
+      Name: 'Monster Dog (aka Jadashha)',
+      Description: 'Jadashha from Q\'onoS',
+      Crates: 8,
+      EnergyCredits: 20,
+      id: 1})).toEqual({
+        type: 'ADD_CARGO',
+        Name: 'Monster Dog (aka Jadashha)',
+        Description: 'Jadashha from Q\'onoS',
+        Crates: 8,
+        EnergyCredits: 20,
+        id: 1
+      })
+  })
 });
