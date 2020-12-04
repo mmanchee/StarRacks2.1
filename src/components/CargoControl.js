@@ -4,6 +4,7 @@ import EditCargoForm from "./EditCargoForm";
 import NewCargoForm from "./NewCargoForm";
 import CargoDetail from './CargoDetail';
 import { connect } from 'react-redux';
+import * as a from './../actions';
 
 
 class CargoControl extends React.Component{
@@ -11,8 +12,6 @@ class CargoControl extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      formVisibleOnPage: false,
-      cargoManifest: [],
       selectedCargo: null,
       editing: false
     };
@@ -20,11 +19,10 @@ class CargoControl extends React.Component{
   //event handlers
   // Edit
   handleEditingCargoInManifest = (cargoToEdit) => { // editing cargo in actual array
-    const editedCargoManifest = this.state.cargoManifest
-      .filter(cargo => cargo.id !== this.state.selectedCargo.id)
-      .concat(cargoToEdit);
+    const { dispatch } = this.props;
+    const action = a.addCargo(cargoToEdit);
+    dispatch(action);
     this.setState({
-      cargoManifest: editedCargoManifest,
       editing: false,
       selectedCargo: null
     });
@@ -34,12 +32,10 @@ class CargoControl extends React.Component{
   }
   // Delete
   handleDeletingCargo = (id) => { /// deletes cargo from array
-    const newCargoManifest = this.state.cargoManifest
-      .filter(cargo => cargo.id !== id);
-    this.setState({
-      cargoManifest: newCargoManifest,
-      selectedCargo: null
-    });
+    const { dispatch } = this.props;
+    const action = a.deleteCargo(id);
+    dispatch(action);
+    this.setState({ selectedCargo: null });
   }
 
   handleClick = () => {  // sets state to normal
@@ -65,12 +61,11 @@ class CargoControl extends React.Component{
   }
   //Create
   handleAddingNewCargoToManifest = (newCargo) => { // adds new cargo to Array
-    const newCargoManifest = this.state.cargoManifest
-      .concat(newCargo);
-    this.setState({
-      cargoManifest: newCargoManifest,
-      formVisibleOnPage: false
-    });
+    const { dispatch } = this.props;
+    const action = a.addCargo(newCargo);
+    dispatch(action);
+    const action2 = a.toggleForm();
+    dispatch(action2);
   }
 
   handleChangeCargoCratesClick =  (cargoToEdit) => {
