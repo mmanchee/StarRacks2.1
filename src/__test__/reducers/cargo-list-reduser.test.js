@@ -1,4 +1,5 @@
 import cargoListReducer from '../../reducers/cargo-list-reducer';
+import * as c from './../../actions/ActionTypes';
 
 describe('cargoListReducer', () => {
 
@@ -35,7 +36,7 @@ describe('cargoListReducer', () => {
   test('Should accurately add new cargo to the cargoManifest', () => {
     const { Name, Description, Crates, EnergyCredits, id } = cargoData;
     action = {
-      type: 'ADD_CARGO',
+      type: c.ADD_CARGO,
       Name: Name,
       Description: Description,
       Crates: Crates,
@@ -55,7 +56,7 @@ describe('cargoListReducer', () => {
   });
   test('Should accurately jettison cargo', () => {
     action = {
-      type: 'DELETE_CARGO',
+      type: c.DELETE_CARGO,
       id: 1
     };
     expect(cargoListReducer(currentState, action)).toEqual({
@@ -68,5 +69,25 @@ describe('cargoListReducer', () => {
       }
     });
   });
-  
+  test('Should accurately change quantity in the cargoManifest', () => {
+    const { Name, Description, Crates, EnergyCredits, id } = cargoData;
+    action = {
+      type: c.QUANTITY_CHANGE,
+      Name: Name,
+      Description: Description,
+      Crates: Crates,
+      EnergyCredits: EnergyCredits,
+      id: id
+    };
+
+    expect(cargoListReducer({}, action)).toEqual({
+      [id]: {
+        Name: Name,
+        Description: Description,
+        Crates: Crates,
+        EnergyCredits: EnergyCredits,
+        id: id
+      }
+    });
+  });
 });

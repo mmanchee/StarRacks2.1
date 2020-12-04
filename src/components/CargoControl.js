@@ -6,6 +6,7 @@ import CargoDetail from './CargoDetail';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import * as a from './../actions';
+import * as c from './..actions/ActionTypes';
 
 class CargoControl extends React.Component{
   

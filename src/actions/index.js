@@ -1,16 +1,18 @@
+import * as c from './ActionTypes';
+
 export const deleteCargo = id => ({
-  type: 'DELETE_CARGO',
+  type: c.DELETE_CARGO,
   id
 });
 
 export const toggleForm = () => ({
-  type: 'TOGGLE_FORM'
+  type: c.TOGGLE_FORM
 });
 
 export const addCargo = (cargo) => {
   const { Name, Description, Crates, EnergyCredits, id } = cargo;
   return {
-    type: 'ADD_CARGO',
+    type: c.ADD_CARGO,
     Name: Name,
     Description: Description,
     Crates: Crates,
@@ -21,7 +23,7 @@ export const addCargo = (cargo) => {
 export const quantityChange = (cargo) => {
   const { Name, Description, Crates, EnergyCredits, id } = cargo;
   return {
-    type: 'QUANTITY_CHANGE',
+    type: c.QUANTITY_CHANGE,
     Name: Name,
     Description: Description,
     Crates: Crates,
