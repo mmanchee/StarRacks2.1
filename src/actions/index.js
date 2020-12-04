@@ -16,5 +16,5 @@ export const addCargo = (cargo) => {
     Crates: Crates,
     EnergyCredits: EnergyCredits,
     id: id
-  }
+  };
 }
