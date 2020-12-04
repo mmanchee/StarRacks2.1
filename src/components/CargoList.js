@@ -11,7 +11,7 @@ function CargoList(props) {
       <div className="table-h-other">Total E</div>
       <div className="box">
         <div className="inner-box">
-          {props.Cargos.map((cargo) => 
+          {Object.values(props.cargoList).map((cargo) => 
             <Cargo
               whenCargoClicked = {props.onCargoSelection}
               Name={cargo.Name}
@@ -28,7 +28,7 @@ function CargoList(props) {
 }
 
 CargoList.propTypes = {
-  Cargos: PropTypes.array,
+  cargoList: PropTypes.object,
   onCargoSelection: PropTypes.func
 };
 

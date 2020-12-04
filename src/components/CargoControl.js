@@ -3,9 +3,9 @@ import CargoList from "./CargoList";
 import EditCargoForm from "./EditCargoForm";
 import NewCargoForm from "./NewCargoForm";
 import CargoDetail from './CargoDetail';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import * as a from './../actions';
-
 
 class CargoControl extends React.Component{
   
@@ -41,23 +41,19 @@ class CargoControl extends React.Component{
   handleClick = () => {  // sets state to normal
     if (this.state.selectedCargo != null) {
       this.setState({
-        formVisibleOnPage: false,
         selectedCargo: null,
         editing: false
       });
     } else {
-      if(this.state.cargoManifest.length < 20) {
-        this.setState(prevState => ({
-          formVisibleOnPage: !prevState.formVisibleOnPage,
-        }));
-      }
+      const { dispatch } = this.props;
+      const action = a.toggleForm();
+      dispatch(action);
     }
   }
   // Detail
   handleChangingSelectedCargo = (id) => { // view cargo in Detail
-    const selectedCargo = this.state.cargoManifest
-      .filter(cargo => cargo.id === id)[0];
-    this.setState({selectedCargo});
+    const selectedCargo = this.props.cargoManifest;
+    this.setState({selectedCargo: selectedCargo});
   }
   //Create
   handleAddingNewCargoToManifest = (newCargo) => { // adds new cargo to Array
@@ -69,12 +65,9 @@ class CargoControl extends React.Component{
   }
 
   handleChangeCargoCratesClick =  (cargoToEdit) => {
-    const editedCargoManifest = this.state.cargoManifest
-      .filter(cargo => cargo.id !== this.state.selectedCargo.id)
-      .concat(cargoToEdit);
-    this.setState({
-      cargoManifest: editedCargoManifest,
-    });
+    const { dispatch } = this.props;
+    const action = a.quantityChange(cargoToEdit);
+    dispatch(action);
   }
 
   render(){
