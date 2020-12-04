@@ -18,13 +18,31 @@ describe('cargo actions', () => {
       Description: 'Jadashha from Q\'onoS',
       Crates: 8,
       EnergyCredits: 20,
-      id: 1})).toEqual({
-        type: 'ADD_CARGO',
-        Name: 'Monster Dog (aka Jadashha)',
-        Description: 'Jadashha from Q\'onoS',
-        Crates: 8,
-        EnergyCredits: 20,
-        id: 1
-      })
-  })
+      id: 1
+    })).toEqual({
+      type: 'ADD_CARGO',
+      Name: 'Monster Dog (aka Jadashha)',
+      Description: 'Jadashha from Q\'onoS',
+      Crates: 8,
+      EnergyCredits: 20,
+      id: 1
+    });
+  });
+
+  it('quantityChange should change QUANTITY_CHANGE action', () => {
+    expect(actions.quantityChange({ 
+      Name: 'Monster Dog (aka Jadashha)',
+      Description: 'Jadashha from Q\'onoS',
+      Crates: 10,
+      EnergyCredits: 20,
+      id: 1
+    })).toEqual({
+      type: 'QUANTITY_CHANGE',
+      Name: 'Monster Dog (aka Jadashha)',
+      Description: 'Jadashha from Q\'onoS',
+      Crates: 10,
+      EnergyCredits: 20,
+      id: 1
+    });
+  });
 });
