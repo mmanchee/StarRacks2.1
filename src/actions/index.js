@@ -18,3 +18,14 @@ export const addCargo = (cargo) => {
     id: id
   }
 }
+export const quantityChange = (cargo) => {
+  const { Name, Description, Crates, EnergyCredits, id } = cargo;
+  return {
+    type: 'QUANTITY_CHANGE',
+    Name: Name,
+    Description: Description,
+    Crates: Crates,
+    EnergyCredits: EnergyCredits,
+    id: id
+  }
+}
