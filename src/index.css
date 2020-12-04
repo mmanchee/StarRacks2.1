@@ -1,0 +1,212 @@
+.contain {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+  color: antiquewhite;
+  width: 1000px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 300;
+	overflow: hidden;
+	padding: 30px 50px;
+}
+#header {
+  text-align: center;
+  position:fixed;
+  height: 115px;
+  top:0px;
+  left:0px;
+  width:100%;
+  background:rgb(31, 31, 31, .7);
+}
+#header-title { 
+  text-transform: uppercase;
+  font-family: verdana;
+  letter-spacing: 10px;
+  font-size: 60px;
+  font-weight: 700;
+  color: #f5f5f5;
+  text-shadow: 1px 1px 1px #919191,
+      1px 2px 1px #919191,
+      1px 3px 1px #919191,
+      1px 4px 1px #919191,
+      1px 5px 1px #919191,
+      1px 6px 1px #919191,
+      1px 7px 1px #919191,
+      1px 8px 1px #919191,
+      1px 9px 1px #919191,
+      1px 10px 1px #919191,
+  1px 18px 6px rgba(16,16,16,0.4),
+  1px 22px 10px rgba(16,16,16,0.2),
+  1px 25px 35px rgba(16,16,16,0.2),
+  1px 30px 60px rgba(16,16,16,0.4);
+}
+
+#pad {
+  background-color: rgb(77, 77, 77);
+  margin-top: 125px;
+  width: 950px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px solid lightgray;
+  border-radius: 60px;
+}
+#inner-pad {
+  width: 800px;
+  height: 450px;
+  border: 5px solid rgb(155, 154, 154);
+  border-radius: 30px;
+  padding: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(17, 17, 17);
+}
+#inner-pad-padding {
+  height: 25px;
+}
+#footer {
+  text-align: center;
+  position:fixed;
+  font-size: 15px;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  color:#CCC;
+  background:rgb(68, 67, 87, 0.8);
+  padding:8px;
+}
+
+/* Tables */
+.table-h-name {
+  display: inline-block;
+  font-weight: 800;
+  padding-left: 40px;
+  width: 35%;
+}
+.table-h-other {
+  display: inline-block;
+  font-weight: 800;
+  width: 30%;
+}
+.table-name {
+  display: inline-block;
+  width: 35%;
+}
+.table-other {
+  display: inline-block;
+  text-align: center;
+  width: 30%;
+}
+.table-row {
+  padding: 5px;
+}
+.table-row :hover {
+  background-color: rgb(116, 168, 170, .7);
+}
+
+/* Inputs */
+
+input {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 400px;
+  height: 30px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 0 10px 0 10px;
+  color: antiquewhite;
+  background-color: rgb(44, 44, 44);
+}
+
+textarea {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 400px;
+  height: 120px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 0 10px 0 10px;
+  color: antiquewhite;
+  background-color: rgb(44, 44, 44);
+}
+
+.nav-button {
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+button {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: rgb(46, 67, 107);
+  padding: 0 10px 0 10px;
+  height: 30px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.reusable-input {
+  margin-left: 150px;
+}
+
+/* Boxes */
+.box {
+  height: 300px;
+  width: 100%;
+  text-align: left;
+  overflow-y: scroll;
+  margin-top: 2% 0 2% 5%;
+}
+.inner-box {
+  margin: 2% 5% 2% 5%;
+}
+
+/* Background */
+@keyframes STAR-MOVE {
+	from {
+		left: 0;
+		top: 0;
+	}
+	to { 
+		left: -10000px;
+		top: -2000px;
+	}
+}
+
+#background {
+	background: black url(./img/background.png) repeat 5% 5%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 100;
+	
+	animation-name: STAR-MOVE;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+#midground {
+	background: url(./img/midground.png) repeat 20% 20%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 200;
+	
+	animation-name: STAR-MOVE;
+	animation-duration: 150s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+#foreground {
+	background: url(./img/foreground.png) repeat 35% 35%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 300;
+	
+	animation-name: STAR-MOVE;
+	animation-duration: 100s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
