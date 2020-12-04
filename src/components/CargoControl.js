@@ -3,6 +3,8 @@ import CargoList from "./CargoList";
 import EditCargoForm from "./EditCargoForm";
 import NewCargoForm from "./NewCargoForm";
 import CargoDetail from './CargoDetail';
+import { connect } from 'react-redux';
+
 
 class CargoControl extends React.Component{
   
@@ -126,5 +128,18 @@ class CargoControl extends React.Component{
     );
   }
 }
+
+CargoControl.propTypes = {
+  cargoManifest: PropTypes.object
+};
+
+const mapStoreToProps = state => {
+  return {
+    cargoManifest: state.cargoManifest,
+    formVisibleOnPage: state.formVisibleOnPage
+  }
+}
+
+CargoControl = connect(mapStoreToProps)(CargoControl);
 
 export default CargoControl;

@@ -3,14 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
+import { createStore } from 'redux';
+import rootReducer from './reducers/index';
+import { Provider } from 'react-redux';
+import { devToolsEnhancer } from 'redux-devtools-extension';
+
+const stare = createStore(rootReducer, devToolsEnhancer());
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <div id="background"></div>
     <div id="midground"></div>
     <div id="foreground"></div>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
