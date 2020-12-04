@@ -5,7 +5,7 @@
 <p align="center">
     <!-- Project Avatar/Logo -->
     <br>
-     <a href="https://github.com/mmanchee/StarRacks">
+     <a href="https://github.com/mmanchee/StarRacks2">
         <img src="./src/img/StarRacksLogo.png">
     </a>
     <p align="center">
@@ -19,20 +19,20 @@
     </p>
     <!-- Project Shields -->
     <p align="center">
-        <a href="https://github.com/mmanchee/StarRacks/graphs/contributors">
-            <img src="https://img.shields.io/github/contributors/mmanchee/StarRacks.svg?style=plastic">
+        <a href="https://github.com/mmanchee/StarRacks2/graphs/contributors">
+            <img src="https://img.shields.io/github/contributors/mmanchee/StarRacks2.svg?style=plastic">
         </a>
         ¨
-        <a href="https://github.com/mmanchee/StarRacks/stargazers">
-            <img src="https://img.shields.io/github/stars/mmanchee/StarRacks.svg?color=yellow&style=plastic">
+        <a href="https://github.com/mmanchee/StarRacks2/stargazers">
+            <img src="https://img.shields.io/github/stars/mmanchee/StarRacks2.svg?color=yellow&style=plastic">
         </a>
         ¨
-        <a href="https://github.com/mmanchee/StarRacks/issues">
-            <img src="https://img.shields.io/github/issues/mmanchee/StarRacks?style=plastic">
+        <a href="https://github.com/mmanchee/StarRacks2/issues">
+            <img src="https://img.shields.io/github/issues/mmanchee/StarRacks2?style=plastic">
         </a>
         ¨
-        <a href="https://github.com/mmanchee/StarRacks/blob/master/LICENSE.txt">
-            <img src="https://img.shields.io/github/license/mmanchee/StarRacks?color=orange&style=plastic">
+        <a href="https://github.com/mmanchee/StarRacks2/blob/master/LICENSE.txt">
+            <img src="https://img.shields.io/github/license/mmanchee/StarRacks2?color=orange&style=plastic">
         </a>
         ¨
     </p>
@@ -43,9 +43,9 @@
 
 <!-- Project Links -->
 <p align="center">
-    <a href="https://github.com/mmanchee/StarRacks"><big>Project Docs</big></a> ·
-    <a href="https://github.com/mmanchee/StarRacks/issues"><big>Report Bug</big></a> ·
-    <a href="https://github.com/mmanchee/StarRacks/issues"><big>Request Feature</big></a>
+    <a href="https://github.com/mmanchee/StarRacks2"><big>Project Docs</big></a> ·
+    <a href="https://github.com/mmanchee/StarRacks2/issues"><big>Report Bug</big></a> ·
+    <a href="https://github.com/mmanchee/StarRacks2/issues"><big>Request Feature</big></a>
 </p>
 ------------------------------
 
@@ -68,15 +68,11 @@
 ## 🌐 About the Project
 
 ### 📖 Description
-Capitan, it's time for a journey of discovery and trade. We are taking our 24th Century Intergalactic Alcubierre Warp Vessel (spaceship) on an adventure around the galaxy. Trade our goods for Energy Credits (E) and seeing some new places along the way, like the water based ships of a millennium ago. We will pick up some goods on Earth and make our way across the stars, selling and stock goods at every planet. Unfortunately our Spatial Matter Calibrator (shrinkray) is broken, so we only have room in the cargo hold for 32 Thermoplastic Liqui-Tite Modules (crates) of trade goods per slot. Diversification of our cargo is the key to more Credits, so we only want to stock one item per slot at a time. The hold has 20 slots for all the trade goods. So what do you say say Captain... Engage! (queue scifi music)
+Star Racks 2 - Rath of the Crates
+Capitan, it's time for a journey of discovery and trade, again. This time we have a new Quantum AI Operation Control (Redux) that was integrated on the last ship refitting. SO, (queue scifi scroll) We are, again, taking our 24th Century Intergalactic Alcubierre Warp Vessel (spaceship) on an adventure around the galaxy. Trade our goods for Energy Credits (E) and seeing some more new places along the way, like the water based ships of a millennium ago. We will pick up some goods on Earth and make our way across the stars, selling and stocking goods from every planet. Unfortunately our Spatial Matter Calibrator (shrinkray) is still broken (you think that would have been the first thing they refitted ... but the Fleet is all about this new Redux thing ... ), so we only have room in the cargo hold for 32 Thermoplastic Liqui-Tite Modules (crates) of trade goods per slot. Diversification of our cargo is still the key to more Credits, so we only want to stock one item per slot at a time. The hold has 20 slots for all the trade goods. So what do you say say Captain... Engage! (queue scifi music)
 
 <!-- Brainstorm
-crates of goods
-20 index max in array
-16 max barrels per good
-add items
-trade items
-cant go below 0
+refactor with redux and tests
 
  -->
 ### 🦠 Known Bugs
@@ -92,8 +88,8 @@ cant go below 0
 
 ## 🏁 Design
 
-<a href="https://github.com/mmanchee/StarRacks">
-    <img src="./src/img/StarRacksDia.png">
+<a href="https://github.com/mmanchee/StarRacks2">
+    <img src="./src/img/StarRacks2Dia.png">
 </a>
 
 ### 📋 Prerequisites
