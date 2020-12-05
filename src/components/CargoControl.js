@@ -6,7 +6,6 @@ import CargoDetail from './CargoDetail';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import * as a from './../actions';
-import * as c from './..actions/ActionTypes';
 
 class CargoControl extends React.Component{
   
@@ -53,7 +52,7 @@ class CargoControl extends React.Component{
   }
   // Detail
   handleChangingSelectedCargo = (id) => { // view cargo in Detail
-    const selectedCargo = this.props.cargoManifest;
+    const selectedCargo = this.props.cargoManifest[id];
     this.setState({selectedCargo: selectedCargo});
   }
   //Create
@@ -88,30 +87,30 @@ class CargoControl extends React.Component{
         onChangeCargoCratesClick = {this.handleChangeCargoCratesClick} 
       />;
       buttonText = "Return to Cargo Manifest";
-    } else if (this.state.formVisibleOnPage) { // catch is set
+    } else if (this.props.formVisibleOnPage) { // catch is set
       currentlyVisibleState = <NewCargoForm 
         onNewCargoCreation={this.handleAddingNewCargoToManifest} 
       />;
       buttonText = "Return to Cargo Manifest";
     } else {                                // default
       currentlyVisibleState = <CargoList 
-        Cargos={this.state.cargoManifest} 
+        cargoList={this.props.cargoManifest} 
         onCargoSelection={this.handleChangingSelectedCargo} 
       />;
-      if (this.state.cargoManifest.length > 19) {
+      if (this.props.cargoManifest.length > 19) {
         buttonText = "Cargo Bay if Full";
       } else {
         buttonText = "Add Cargo";
       }
     }
-    
+    console.log("count ", this.props.cargoManifest.length, " props ", this.props)
     return (
       <React.Fragment>
         <div className="nav-button">
           <button onClick={this.handleClick}>{buttonText}</button>
         </div>
         {currentlyVisibleState}
-        {this.state.cargoManifest.length === 0 && 
+        {this.props.cargoManifest.length === 0 && 
           currentlyVisibleState.props.Cargos !== undefined ? "There are no cargos currently on the ship" : ""}
       </React.Fragment>
     );
@@ -119,7 +118,8 @@ class CargoControl extends React.Component{
 }
 
 CargoControl.propTypes = {
-  cargoManifest: PropTypes.object
+  cargoManifest: PropTypes.object,
+  dispatch: PropTypes.func
 };
 
 const mapStoreToProps = state => {

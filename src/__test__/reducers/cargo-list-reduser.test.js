@@ -18,7 +18,7 @@ describe('cargoListReducer', () => {
       EnergyCredits: 34,
       id: 2
     }
-  }
+  };
 
   let action;
   const cargoData = {

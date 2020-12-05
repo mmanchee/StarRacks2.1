@@ -18,8 +18,8 @@ export const addCargo = (cargo) => {
     Crates: Crates,
     EnergyCredits: EnergyCredits,
     id: id
-  }
-}
+  };
+};
 export const quantityChange = (cargo) => {
   const { Name, Description, Crates, EnergyCredits, id } = cargo;
   return {
@@ -29,5 +29,5 @@ export const quantityChange = (cargo) => {
     Crates: Crates,
     EnergyCredits: EnergyCredits,
     id: id
-  }
-}
+  };
+};

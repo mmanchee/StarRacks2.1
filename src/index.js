@@ -8,7 +8,7 @@ import rootReducer from './reducers/index';
 import { Provider } from 'react-redux';
 import { devToolsEnhancer } from 'redux-devtools-extension';
 
-const stare = createStore(rootReducer, devToolsEnhancer());
+const store = createStore(rootReducer, devToolsEnhancer());
 
 ReactDOM.render(
   <Provider store={store}>

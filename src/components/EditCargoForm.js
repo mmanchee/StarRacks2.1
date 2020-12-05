@@ -18,10 +18,10 @@ function EditCargoForm (props) {
     <React.Fragment>
       <div className="reusable-input">
         <ReusableForm
-          Name={props.cargo.Name} 
-          Description={props.cargo.Description} 
-          Crates={parseInt(props.cargo.Crates)}
-          EnergyCredits={parseInt(props.cargo.EnergyCredits)}
+          Name={props.Name} 
+          Description={props.Description} 
+          Crates={parseInt(props.Crates)}
+          EnergyCredits={parseInt(props.EnergyCredits)}
           formSubmissionHandler = {handleEditCargoFormSubmission}
           buttonText="Update Cargo" />
       </div>

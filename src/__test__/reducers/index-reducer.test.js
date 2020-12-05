@@ -28,15 +28,15 @@ describe("rootReducer", () => {
       Crates: 8,
       EnergyCredits: 20,
       id: 1
-    }
+    };
     store.dispatch(action);
     expect(store.getState().cargoManifest).toEqual(cargoListReducer(undefined, action));
   });
   test('Check that TOGGLE_FORM action work with formVisibleReducer and root reducer', () => {
     const action = {
       type: c.TOGGLE_FORM
-    }
+    };
     store.dispatch(action);
     expect(store.getState().formVisibleOnPage).toEqual(formVisibleReducer(undefined, action));
-  })
+  });
 });

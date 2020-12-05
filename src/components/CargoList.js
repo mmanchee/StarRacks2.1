@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 
 function CargoList(props) {
+  console.log("props ", props);
   return (
     <React.Fragment>
       <div className="table-h-name">Name</div>

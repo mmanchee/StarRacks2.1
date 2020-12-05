@@ -26,7 +26,7 @@ export default (state = {}, action) => {
         EnergyCredits: EnergyCredits,
         id: id
       }
-    })
+    });
   default:
     return state;
   }
