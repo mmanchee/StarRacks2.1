@@ -8,7 +8,7 @@
 <p align="center">
     <!-- Project Avatar/Logo -->
     <br>
-     <a href="https://github.com/mmanchee/StarRacks2">
+     <a href="https://mmanchee.github.io/StarRacks2/">
         <img src="./src/img/StarRacks2Logo.png">
     </a>
     <p align="center">
@@ -22,20 +22,20 @@
     </p>
     <!-- Project Shields -->
     <p align="center">
-        <a href="https://github.com/mmanchee/StarRacks2/graphs/contributors">
-            <img src="https://img.shields.io/github/contributors/mmanchee/StarRacks2.svg?style=plastic">
+        <a href="https://github.com/mmanchee/StarRacks2.1/graphs/contributors">
+            <img src="https://img.shields.io/github/contributors/mmanchee/StarRacks2.1.svg?style=plastic">
         </a>
         ¨
-        <a href="https://github.com/mmanchee/StarRacks2/stargazers">
-            <img src="https://img.shields.io/github/stars/mmanchee/StarRacks2.svg?color=yellow&style=plastic">
+        <a href="https://github.com/mmanchee/StarRacks2.1/stargazers">
+            <img src="https://img.shields.io/github/stars/mmanchee/StarRacks2.1.svg?color=yellow&style=plastic">
         </a>
         ¨
-        <a href="https://github.com/mmanchee/StarRacks2/issues">
-            <img src="https://img.shields.io/github/issues/mmanchee/StarRacks2?style=plastic">
+        <a href="https://github.com/mmanchee/StarRacks2.1/issues">
+            <img src="https://img.shields.io/github/issues/mmanchee/StarRacks2.1?style=plastic">
         </a>
         ¨
-        <a href="https://github.com/mmanchee/StarRacks2/blob/master/LICENSE.txt">
-            <img src="https://img.shields.io/github/license/mmanchee/StarRacks2?color=orange&style=plastic">
+        <a href="https://github.com/mmanchee/StarRacks2.1/blob/master/LICENSE.txt">
+            <img src="https://img.shields.io/github/license/mmanchee/StarRacks2.1?color=orange&style=plastic">
         </a>
         ¨
     </p>
@@ -46,9 +46,9 @@
 
 <!-- Project Links -->
 <p align="center">
-    <a href="https://github.com/mmanchee/StarRacks2"><big>Project Docs</big></a> ·
-    <a href="https://github.com/mmanchee/StarRacks2/issues"><big>Report Bug</big></a> ·
-    <a href="https://github.com/mmanchee/StarRacks2/issues"><big>Request Feature</big></a>
+    <a href="https://github.com/mmanchee/StarRacks2.1"><big>Project Docs</big></a> ·
+    <a href="https://github.com/mmanchee/StarRacks2.1/issues"><big>Report Bug</big></a> ·
+    <a href="https://github.com/mmanchee/StarRacks2.1/issues"><big>Request Feature</big></a>
 </p>
 ------------------------------
 
@@ -91,7 +91,7 @@ refactor with redux and tests
 
 ## 🏁 Design
 
-<a href="https://github.com/mmanchee/StarRacks2">
+<a href="https://github.com/mmanchee/StarRacks2.1">
     <img src="./src/img/StarRacks2Dia.png">
 </a>
 
