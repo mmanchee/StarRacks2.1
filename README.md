@@ -1,7 +1,7 @@
 <br>
 <p align="center">
   <u><big>|| <b>Star Racks 2  </b> ||</big></u>
-  <p>Rath of Redux</p>
+  <u><p>Rath of Redux</p></u>
 </p>
 <p align="center">
     <!-- Project Avatar/Logo -->
