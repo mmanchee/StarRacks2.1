@@ -1,12 +1,13 @@
 <br>
 <p align="center">
-  <u><big>|| <b>Star Racks</b> ||</big></u>
+  <u><big>|| <b>Star Racks 2  </b> ||</big></u>
+  <p>Rath of Redux</p>
 </p>
 <p align="center">
     <!-- Project Avatar/Logo -->
     <br>
      <a href="https://github.com/mmanchee/StarRacks2">
-        <img src="./src/img/StarRacksLogo.png">
+        <img src="./src/img/StarRacks2Logo.png">
     </a>
     <p align="center">
       ___________________________
@@ -54,10 +55,10 @@
     * <a href="#📖-description">Description</a>
     * <a href="#🦠-known-bugs">Known Bugs</a>
     * <a href="#🛠-built-with">Built With</a>
-    <!-- * <a href="#🔍-preview">Preview</a> -->
 * <a href="#🏁-getting-started">Getting Started</a>
     * <a href="#📋-prerequisites">Prerequisites</a>
     * <a href="#⚙️-setup-and-use">Setup and Use</a>
+* <a href="#🔍-preview">Preview</a>
 * <a href="#🤝-contributors">Auxiliary</a>
     * <a href="#🤝-contributors">Contributors</a>
     * <a href="#✉️-contact-and-support">Contact</a>
@@ -121,6 +122,17 @@ refactor with redux and tests
     * Type "npm install" - to install Node Package Manager and additional files
     * Type "npm run start" - to open compiled browser and view project
   * Have fun with The Exchange!
+
+### 🔍 Preview
+
+* The app has features to add cargo.
+<img src="./src/img/CargoForm.png">
+
+* The app allows you to see a list of cargo
+<img src="./src/img/CargoList.png">
+
+* The app allows for details and adding or subtracting quantities, as well as editing or deleting cargo.
+<img src="./src/img/CargoDetail.png">
 
 ### 🤝 Contributors
 
