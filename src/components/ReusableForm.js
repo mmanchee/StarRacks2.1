@@ -2,14 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function ReusableForm(props) {
-  console.log("props R ", props);
   return (
     <React.Fragment>
       <form onSubmit={props.formSubmissionHandler}>
         <input
           type='text'
           name='Name'
-          defaultValue={props.Name ? props.Name : ""}
+          Value={props.Name}
           placeholder='Enter a Name' 
           required />
         <br />

@@ -21,10 +21,24 @@ function CargoDetail(props){
   return (
     <React.Fragment>
       <h1>Cargo Detail</h1>
-      <p>Name: {cargo.Name}<br />
-      Description: {cargo.Description}<br />
-      Crates: {cargo.Crates}<br />
-      Energy Credits: {cargo.EnergyCredits} E</p>
+      <table>
+        <tr>
+          <td>Name:</td>
+          <td>{cargo.Name}</td>
+        </tr>
+        <tr>
+          <td>Description:</td>
+          <td>{cargo.Description}</td>
+        </tr>
+        <tr>
+          <td>Crates:</td>
+          <td>{cargo.Crates}</td>
+        </tr>
+        <tr>
+          <td>Energy Credits:</td>
+          <td>{cargo.EnergyCredits} E</td>
+        </tr>
+      </table>
       <button onClick = {()=> handleChangeCargoCratesButton(cargo, true, 1) }>Trade</button> {/* reduce */}
       <button onClick = {()=> handleChangeCargoCratesButton(cargo, false, 1)  }>Stock +1</button> {/* increase */}
       <button onClick = {()=> handleChangeCargoCratesButton(cargo, false, 8)  }>Stock +8</button> {/* increase */}

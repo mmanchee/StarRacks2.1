@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import ReusableForm from "./ReusableForm";
 
 function EditCargoForm (props) {
-  console.log("props E ", props);
   function handleEditCargoFormSubmission(event) {
     event.preventDefault();
     props.onEditCargo({
@@ -18,10 +17,10 @@ function EditCargoForm (props) {
     <React.Fragment>
       <div className="reusable-input">
         <ReusableForm
-          Name={props.Name} 
-          Description={props.Description} 
-          Crates={parseInt(props.Crates)}
-          EnergyCredits={parseInt(props.EnergyCredits)}
+          Name={props.cargo.Name} 
+          Description={props.cargo.Description} 
+          Crates={parseInt(props.cargo.Crates)}
+          EnergyCredits={parseInt(props.cargo.EnergyCredits)}
           formSubmissionHandler = {handleEditCargoFormSubmission}
           buttonText="Update Cargo" />
       </div>
