@@ -75,7 +75,14 @@
   background:rgb(68, 67, 87, 0.8);
   padding:8px;
 }
-
+/* Title */
+.card-title {
+  font-size: 35px;
+  text-align: center;
+}
+.card-body {
+  font-size: 15px;
+}
 /* Tables */
 .table-h-name {
   display: inline-block;

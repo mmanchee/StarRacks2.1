@@ -2,6 +2,8 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import CargoControl from "./CargoControl";
+import Title from './Title';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -13,7 +15,17 @@ function App() {
         <div id="pad">
           <div id="inner-pad-padding"></div>
           <div id="inner-pad">
-            <CargoControl />
+            <Router>
+              <Switch>
+                <Route path='/CargoControl'>
+                  <CargoControl />
+                </Route>
+                <Route path='/'>
+                  <Title />
+                </Route>
+              </Switch>
+            </Router>
+            
           </div>
         </div>
         <div id="footer">
